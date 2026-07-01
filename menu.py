@@ -1,5 +1,6 @@
 import os
 from config import *
+from theme import pilih_theme
 
 def menu():
 
@@ -11,7 +12,9 @@ def menu():
 ═══════════════════════════
 [1] Informasi
 [2] Bersihkan Layar
-[3] Reload
+[3] Ganti Theme
+[4] Reload
+[5] owner
 [0] Keluar
 ═══════════════════════════
 """ + COLOR["reset"])
@@ -27,9 +30,15 @@ def menu():
 
         elif pilih == "2":
             os.system("clear")
-
+            
         elif pilih == "3":
+            pilih_theme()
+
+        elif pilih == "4":
             os.system("clear")
+            
+        elif pilih == "5"
+            print("Rezy ganteng dan kaya raya")
 
         elif pilih == "0":
             print("Terima kasih.")
