@@ -29,7 +29,6 @@ elif pilih == "2":
     os.system("clear")
 
 elif pilih == "3":
-    theme_menu()
 
 elif pilih == "4":
     os.system("clear")
