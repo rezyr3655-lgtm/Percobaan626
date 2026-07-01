@@ -1,5 +1,6 @@
 import os
 from config import *
+from theme import theme_menu
 from theme import pilih_theme
 
 def menu():
