@@ -1,42 +1,21 @@
 #!/usr/bin/env python3
 
 import os
-import time
+
 from config import *
+from loading import loading
+from menu import menu
 
 os.system("clear")
 
-# Membaca logo
-with open("logo.txt", "r", encoding="utf-8") as f:
-    logo = f.read()
+with open("logo.txt", encoding="utf-8") as f:
+    print(COLOR["cyan"] + f.read() + COLOR["reset"])
 
-print(COLOR["cyan"] + logo + COLOR["reset"])
+print(COLOR["yellow"] + TOOL_NAME)
+print("Version :", VERSION)
+print("Author  :", AUTHOR)
+print(COLOR["reset"])
 
-print(COLOR["green"] + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-print(f" Tool    : {TOOL_NAME}")
-print(f" Version : {VERSION}")
-print(f" Author  : {AUTHOR}")
-print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + COLOR["reset"])
+loading()
 
-print()
-
-print(COLOR["yellow"] + "Loading..." + COLOR["reset"])
-
-for i in range(101):
-    print(f"\r[{i}%]", end="")
-    time.sleep(0.02)
-
-print("\n")
-
-print(COLOR["cyan"] + "[1] Start")
-print("[2] About")
-print("[0] Exit" + COLOR["reset"])
-
-menu = input("\nPilih : ")
-
-if menu == "1":
-    print("Tool akan dijalankan...")
-elif menu == "2":
-    print("XNX Theme by xnx jakarta")
-else:
-    print("Bye...")
+menu()
