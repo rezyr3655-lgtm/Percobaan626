@@ -38,9 +38,16 @@ def save_theme(color):
 def load_theme():
     try:
         with open(".theme") as f:
-            return f.read().strip()
+            color = f.read().strip()
     except:
-        return "\033[96m"
+        color = "\033[96m"
+
+    return {
+        "cyan": color,
+        "green": color,
+        "yellow": color,
+        "reset": "\033[0m"
+    }
 
 def theme_menu():
 
