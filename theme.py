@@ -68,6 +68,7 @@ def theme_menu():
 0. Kembali
 
 =========================
+input("\nTekan Enter...")
 """)
 
     pilih = input("Pilih : ")
