@@ -1,49 +1,75 @@
-from config import COLOR
+# theme.py
+
+import os
 
 THEMES = {
     "1": {
-        "nama": "Default",
-        "warna": COLOR["cyan"]
+        "name": "Cyber Blue",
+        "color": "\033[96m"
     },
     "2": {
-        "nama": "Merah",
-        "warna": COLOR["red"]
+        "name": "Matrix Green",
+        "color": "\033[92m"
     },
     "3": {
-        "nama": "Hijau",
-        "warna": COLOR["green"]
+        "name": "Bloody Red",
+        "color": "\033[91m"
     },
     "4": {
-        "nama": "Kuning",
-        "warna": COLOR["yellow"]
+        "name": "Golden Yellow",
+        "color": "\033[93m"
     },
     "5": {
-        "nama": "Biru",
-        "warna": COLOR["blue"]
+        "name": "Purple Hacker",
+        "color": "\033[95m"
+    },
+    "6": {
+        "name": "Rainbow",
+        "color": "\033[36m"
     }
 }
 
-theme = THEMES["1"]
+RESET = "\033[0m"
 
-def pilih_theme():
-    global theme
+def save_theme(color):
+    with open(".theme", "w") as f:
+        f.write(color)
+
+def load_theme():
+    try:
+        with open(".theme") as f:
+            return f.read().strip()
+    except:
+        return "\033[96m"
+
+def theme_menu():
+
+    os.system("clear")
 
     print("""
-====== PILIH THEME ======
+=========================
+      PILIH THEME
+=========================
 
-1. Default
-2. Merah
-3. Hijau
-4. Kuning
-5. Biru
+1. Cyber Blue
+2. Matrix Green
+3. Bloody Red
+4. Golden Yellow
+5. Purple Hacker
+6. Rainbow
+
+0. Kembali
 
 =========================
 """)
 
-    pilih = input("Pilih Theme : ")
+    pilih = input("Pilih : ")
+
+    if pilih == "0":
+        return
 
     if pilih in THEMES:
-        theme = THEMES[pilih]
-        print("Theme berhasil diganti ke", theme["nama"])
+        save_theme(THEMES[pilih]["color"])
+        print(f"\nTheme berhasil diganti menjadi {THEMES[pilih]['name']}")
     else:
-        print("Theme tidak tersedia.")
+        print("\nTheme tidak tersedia.")
