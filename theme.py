@@ -68,10 +68,10 @@ def theme_menu():
 0. Kembali
 
 =========================
-input("\nTekan Enter...")
 """)
 
-    pilih = input("Pilih : ")
+    pilih = input("\nTekan Enter...")
+os.system("clear")
 
     if pilih == "0":
         return
