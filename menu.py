@@ -42,7 +42,6 @@ def menu():
 
         elif pilih == "0":
             print("Terima kasih.")
-            break
-
-        else:
+            
+        else:break
             print("Pilihan salah.\n")
