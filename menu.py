@@ -14,7 +14,6 @@ def menu():
 [2] Bersihkan Layar
 [3] Ganti Theme
 [4] Reload
-[5] owner
 [0] Keluar
 ═══════════════════════════
 """ + COLOR["reset"])
@@ -32,16 +31,10 @@ elif pilih == "2":
     os.system("clear")
 
 elif pilih == "3":
-    print("Masuk ke theme")
-    input("Enter...")
     theme_menu()
 
 elif pilih == "4":
     os.system("clear")
-
-elif pilih == "5":
-    print("Rezy ganteng dan kaya raya")
-    input("\nEnter...")
 
 elif pilih == "0":
     print("Terima kasih.")
