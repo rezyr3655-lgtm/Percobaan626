@@ -6,8 +6,11 @@ from config import *
 from loading import loading
 from menu import menu
 from theme import load_theme
-
+...
 COLOR = load_theme()
+...
+loading()
+menu()
 
 os.system("clear")
 
