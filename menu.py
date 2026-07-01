@@ -22,26 +22,28 @@ def menu():
         pilih = input("Pilih : ")
 
         if pilih == "1":
-            print("\nNama Tool :", TOOL_NAME)
-            print("Versi     :", VERSION)
-            print("Author    :", AUTHOR)
-            input("\nEnter...")
-            os.system("clear")
+    print("\nNama Tool :", TOOL_NAME)
+    print("Versi     :", VERSION)
+    print("Author    :", AUTHOR)
+    input("\nEnter...")
+    os.system("clear")
 
-        elif pilih == "2":
-            os.system("clear")
-            
-        elif pilih == "3":
+elif pilih == "2":
+    os.system("clear")
+
+elif pilih == "3":
     theme_menu()
 
-        elif pilih == "4":
-            os.system("clear")
-            
-        elif pilih == "5"
-            print("Rezy ganteng dan kaya raya")
+elif pilih == "4":
+    os.system("clear")
 
-        elif pilih == "0":
-            print("Terima kasih.")
-            
-        else:break
-            print("Pilihan salah.\n")
+elif pilih == "5":
+    print("Rezy ganteng dan kaya raya")
+    input("\nEnter...")
+
+elif pilih == "0":
+    print("Terima kasih.")
+    break
+
+else:
+    print("Pilihan salah.")
