@@ -70,8 +70,7 @@ def theme_menu():
 =========================
 """)
 
-    pilih = input("\nTekan Enter...")
-os.system("clear")
+        pilih = input("Pilih : ")
 
     if pilih == "0":
         return
@@ -79,5 +78,9 @@ os.system("clear")
     if pilih in THEMES:
         save_theme(THEMES[pilih]["color"])
         print(f"\nTheme berhasil diganti menjadi {THEMES[pilih]['name']}")
+        input("\nTekan Enter...")
+        os.system("clear")
     else:
         print("\nTheme tidak tersedia.")
+        input("\nTekan Enter...")
+        os.system("clear")
