@@ -32,6 +32,8 @@ elif pilih == "2":
     os.system("clear")
 
 elif pilih == "3":
+    print("Masuk ke theme")
+    input("Enter...")
     theme_menu()
 
 elif pilih == "4":
