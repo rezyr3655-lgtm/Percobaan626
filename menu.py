@@ -32,7 +32,7 @@ def menu():
             os.system("clear")
             
         elif pilih == "3":
-            pilih_theme()
+    theme_menu()
 
         elif pilih == "4":
             os.system("clear")
