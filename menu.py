@@ -19,11 +19,11 @@ def menu():
         pilih = input("Pilih : ")
 
     if pilih == "1":
-    print("Nama Tool :", TOOL_NAME)
-    print("Versi     :", VERSION)
-    print("Author    :", AUTHOR)
-    input("\nEnter...")
-    os.system("clear")
+       print("Nama Tool :", TOOL_NAME)
+       print("Versi     :", VERSION)
+       print("Author    :", AUTHOR)
+       input("\nEnter...")
+       os.system("clear")
 
 elif pilih == "2":
     os.system("clear")
