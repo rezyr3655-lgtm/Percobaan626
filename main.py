@@ -5,7 +5,7 @@ import os
 from config import *
 from loading import loading
 from menu import menu
-from theme import theme_menu
+from theme import theme_menu, load_theme
 ...
 COLOR = load_theme()
 ...
