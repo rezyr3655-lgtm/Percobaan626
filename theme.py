@@ -50,13 +50,12 @@ def load_theme():
     }
 
 def theme_menu():
-
     os.system("clear")
 
     print("""
-=========================
+========================
       PILIH THEME
-=========================
+========================
 
 1. Cyber Blue
 2. Matrix Green
@@ -67,10 +66,10 @@ def theme_menu():
 
 0. Kembali
 
-=========================
+========================
 """)
 
-        pilih = input("Pilih : ")
+    pilih = input("Pilih : ")
 
     if pilih == "0":
         return
